@@ -10,6 +10,13 @@ apply plugin: 'android'
 
 repositories {
     mavenCentral()
+    maven {
+        credentials {
+            username localMavenUser
+            password localMavenPassword
+        }
+        url localMavenUrl
+    }
 }
 
 android {
