@@ -18,6 +18,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.google.android.gms.location.LocationClient;
+
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -30,6 +32,8 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+
+    LocationClient mLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,8 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+
     }
 
     @Override
